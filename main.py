@@ -285,7 +285,7 @@ def searchnews (userinput):
                 print("ID inválido ou notícia não existe.")
                 input("Pressione enter para continuar")
             continue
-        if (searchnewschoice == 2):
+        if (searchnewschoice == "2"):
             titlesearch = input("Título: ")
             for i in newsdict:
                 values = newsdict[i]
