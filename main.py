@@ -1,4 +1,3 @@
-#GIT TEST
 
 import getpass
 
