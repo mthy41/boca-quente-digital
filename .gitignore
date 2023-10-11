@@ -1,2 +1,6 @@
 #data ignore
 data/.*
+
+#cache
+__pycache__/
+funs/__pycache__/
