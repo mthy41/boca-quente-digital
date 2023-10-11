@@ -1,0 +1,51 @@
+{
+ "guest": [
+  "guest",
+  "convidado",
+  "GUEST",
+  []
+ ],
+ "cat": [
+  "123",
+  "Miguel Ohara",
+  "ADM",
+  [],
+  []
+ ],
+ "rat": [
+  "123",
+  "Kimberlie Schwatson",
+  "USER",
+  []
+ ],
+ "dog": [
+  "123",
+  "Miles Morales",
+  "USER",
+  []
+ ],
+ "bird": [
+  "123",
+  "Ivan Neves",
+  "USER",
+  []
+ ],
+ "koko": [
+  "123123",
+  "Fsdfds Sdfsdfsd",
+  "USER",
+  []
+ ],
+ "busher": [
+  "123123",
+  "Kate Bush",
+  "ADM",
+  [
+   "5"
+  ],
+  [
+   "5"
+  ],
+  []
+ ]
+}

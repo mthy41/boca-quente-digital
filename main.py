@@ -1,7 +1,8 @@
 import getpass
 
+from funs.tempdata import userlist, newsdict, comlist, data_import, data_export
+
 #from funs.testfun import test
-from funs.tempdata import userlist, newsdict, comlist
 from funs.clifun import horbar, verspace
 from funs.siginfun import sigin
 from funs.loggedfun import logged
@@ -9,6 +10,8 @@ from funs.recentnewsfun import recentnews
 from funs.viewnewsfun import viewnews
 from funs.addcomfun import addcom
 
+
+data_import()
 def main ():
     while True:
         #test()
@@ -19,10 +22,11 @@ def main ():
             "[2]Cadastrar.\n"
             "[3]Entrar como convidado.\n"
             "[0]Sair.\n"
-            #f"{userlist}"
+            f"{userlist}"
         ))
         #Sair
         if (menuchoice == "0"):
+            data_export()
             break
         #Login
         if (menuchoice == "1"):
@@ -58,5 +62,6 @@ def main ():
             
         if (menuchoice == "2"):
             sigin()
-            
+           
+
 main()

@@ -1,7 +1,7 @@
 import getpass
 
 from funs.clifun import horbar, verspace
-from funs.tempdata import userlist, newsdict, comlist
+from funs.tempdata import userlist, newsdict, comlist, data_import, data_export
 
 def sigin():
     user = ""
@@ -92,8 +92,10 @@ def sigin():
         if (signinchoice == "1"):
 #"guest": ["guest", "convidado", "GUEST",[]]
             if (userrole == "USER"):
-                userlist[len(userlist)+1] = [userpassword, username, userrole, []]
+                userlist[user] = [userpassword, username, userrole, []]
+                data_export()
                 break
             if (userrole == "ADM"):
                 userlist[user] = [userpassword, username, userrole, [],[]]
+                data_export()
                 break               
