@@ -16,7 +16,7 @@ def main ():
     while True:
         #test()
         recentnews()
-        print("BemprojetoP1/__init__.py vindo, selecione sua opção:")
+        print("Bem vindo, selecione sua opção:")
         menuchoice = str(input(
             "[1]Fazer login.\n"
             "[2]Cadastrar.\n"
