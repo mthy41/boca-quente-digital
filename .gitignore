@@ -1,5 +1,4 @@
 #data ignore
-#data/.*
 
 #cache
 __pycache__/
