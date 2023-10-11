@@ -1,4 +1,4 @@
-from funs.tempdata import userlist, newsdict, comlist
+from funs.tempdata import userlist, newsdict, comlist, data_export
 from funs.clifun import horbar, verspace
 
 def addcom (userinput, userchoice, uservalues, newsvalues):
@@ -19,5 +19,6 @@ def addcom (userinput, userchoice, uservalues, newsvalues):
         comvalues = [userchoice, userinput, com]
         comlist[str(len(comlist)+1)] = comvalues
         newsvalues[5].append(str(len(comlist)))
+        data_export()
     else:
         print("Operação cancelada.")

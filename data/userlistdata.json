@@ -3,13 +3,23 @@
   "guest",
   "convidado",
   "GUEST",
-  []
+  [
+   "1"
+  ],
+  [
+   "1"
+  ]
  ],
  "cat": [
   "123",
   "Miguel Ohara",
   "ADM",
-  [],
+  [
+   "1"
+  ],
+  [
+   "1"
+  ],
   []
  ],
  "rat": [
@@ -22,30 +32,6 @@
   "123",
   "Miles Morales",
   "USER",
-  []
- ],
- "bird": [
-  "123",
-  "Ivan Neves",
-  "USER",
-  []
- ],
- "koko": [
-  "123123",
-  "Fsdfds Sdfsdfsd",
-  "USER",
-  []
- ],
- "busher": [
-  "123123",
-  "Kate Bush",
-  "ADM",
-  [
-   "5"
-  ],
-  [
-   "5"
-  ],
   []
  ]
 }

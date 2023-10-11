@@ -22,7 +22,7 @@ def main ():
             "[2]Cadastrar.\n"
             "[3]Entrar como convidado.\n"
             "[0]Sair.\n"
-            f"{userlist}"
+            #f"{userlist}"
         ))
         #Sair
         if (menuchoice == "0"):
