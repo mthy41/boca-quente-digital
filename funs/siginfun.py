@@ -1,6 +1,6 @@
 import getpass
-from clifun import horbar, verspace
 from tempdata import userlist, newsdict, comlist
+from clifun import horbar, verspace
 
 def sigin():
     user = ""

@@ -1,5 +1,5 @@
 from tempdata import userlist, newsdict, comlist
-from clifun import horbar, verspace
+from funs.clifun import horbar, verspace
 
 def addcom (userinput, userchoice, uservalues, newsvalues):
     verspace()

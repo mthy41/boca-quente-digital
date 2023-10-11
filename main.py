@@ -1,16 +1,17 @@
-
 import getpass
 
-from tempdata import userlist, newsdict, comlist
-from clifun import horbar, verspace
-from siginfun import sigin
-from loggedfun import logged
-from recentnewsfun import recentnews
-from viewnewsfun import viewnews
-from addcomfun import addcom
+from funs.testfun import test
+from funs.tempdata import userlist, newsdict, comlist
+from funs.clifun import horbar, verspace
+from funs.siginfun import sigin
+from funs.loggedfun import logged
+from funs.recentnewsfun import recentnews
+from funs.viewnewsfun import viewnews
+from funs.addcomfun import addcom
 
 def main ():
     while True:
+        test()
         recentnews()
         print("Bem vindo, selecione sua opção:")
         menuchoice = str(input(
