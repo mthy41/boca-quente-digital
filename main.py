@@ -1,4 +1,6 @@
 import getpass
+#import os
+
 
 from funs.tempdata import userlist, newsdict, comlist, data_import, data_export
 
@@ -9,7 +11,6 @@ from funs.loggedfun import logged
 from funs.recentnewsfun import recentnews
 from funs.viewnewsfun import viewnews
 from funs.addcomfun import addcom
-
 
 data_import()
 def main ():
