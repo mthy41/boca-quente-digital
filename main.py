@@ -1,6 +1,6 @@
 import getpass
 
-from funs.testfun import test
+#from funs.testfun import test
 from funs.tempdata import userlist, newsdict, comlist
 from funs.clifun import horbar, verspace
 from funs.siginfun import sigin
@@ -11,9 +11,9 @@ from funs.addcomfun import addcom
 
 def main ():
     while True:
-        test()
+        #test()
         recentnews()
-        print("Bem vindo, selecione sua opção:")
+        print("BemprojetoP1/__init__.py vindo, selecione sua opção:")
         menuchoice = str(input(
             "[1]Fazer login.\n"
             "[2]Cadastrar.\n"

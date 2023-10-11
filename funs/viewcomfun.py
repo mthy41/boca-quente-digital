@@ -1,6 +1,6 @@
-from tempdata import userlist, newsdict, comlist
-from clifun import horbar, verspace
-from addcomfun import addcom
+from funs.tempdata import userlist, newsdict, comlist
+from funs.clifun import horbar, verspace
+from funs.addcomfun import addcom
 
 def viewcom (userinput, uservalues, userchoice):
     while True:

@@ -1,7 +1,7 @@
-from tempdata import userlist, newsdict, comlist
-from clifun import verspace, horbar
-from addcomfun import addcom
-from viewcomfun import viewcom
+from funs.tempdata import userlist, newsdict, comlist
+from funs.clifun import verspace, horbar
+from funs.addcomfun import addcom
+from funs.viewcomfun import viewcom
 
 def viewnews (userinput, userchoice):
     newsvalues = newsdict[userchoice]

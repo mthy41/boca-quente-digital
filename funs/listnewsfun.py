@@ -1,6 +1,6 @@
-from tempdata import userlist, newsdict, comlist
-from clifun import verspace, horbar
-from viewnewsfun import viewnews
+from funs.tempdata import userlist, newsdict, comlist
+from funs.clifun import verspace, horbar
+from funs.viewnewsfun import viewnews
 
 def listnews (userinput):
     islistreversed = False #Ordem padrão (das mais velhas as mais novas)

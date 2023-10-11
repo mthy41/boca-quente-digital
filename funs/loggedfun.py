@@ -1,9 +1,9 @@
-from tempdata import userlist, newsdict, comlist
-from clifun import verspace, horbar
-from recentnewsfun import recentnews
-from searchnewsfun import searchnews
-from listnewsfun import listnews
-from postnewfun import postnew
+from funs.tempdata import userlist, newsdict, comlist
+from funs.clifun import verspace, horbar
+from funs.recentnewsfun import recentnews
+from funs.searchnewsfun import searchnews
+from funs.listnewsfun import listnews
+from funs.postnewfun import postnew
 
 def logged (userinput="guest"):
     while True:

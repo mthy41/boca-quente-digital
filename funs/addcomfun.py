@@ -1,4 +1,4 @@
-from tempdata import userlist, newsdict, comlist
+from funs.tempdata import userlist, newsdict, comlist
 from funs.clifun import horbar, verspace
 
 def addcom (userinput, userchoice, uservalues, newsvalues):
