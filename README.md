@@ -1,5 +1,12 @@
 # TO-DO
 ___
+## Tasks
+- [x] Opção de deletar notícais
+- [ ] Opção de editar notícia
+- [ ] Mudar tela de cadastro
+- [ ] Pedir e-mail no cadastro, com validação
+- [ ] Validar caracteres do user escolhido no cadastro
+___
 ## Features opcionais
 - [x] JSON data parsing
 - [ ] Bcrypt nas senhas
