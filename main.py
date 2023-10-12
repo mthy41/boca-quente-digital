@@ -1,10 +1,12 @@
 import getpass
-#import os
+from art import text2art
+from colorama import *
+#Incializar o colorama
+init(autoreset=True)
 
 
 from funs.tempdata import userlist, newsdict, comlist, data_import, data_export
 
-#from funs.testfun import test
 from funs.clifun import horbar, verspace
 from funs.siginfun import sigin
 from funs.loggedfun import logged
@@ -14,10 +16,11 @@ from funs.addcomfun import addcom
 
 data_import()
 def main ():
+    headerbq = text2art("Bq", "isometric3")
     while True:
         #test()
+        print(f"{Fore.RED}{Style.BRIGHT}{headerbq}{Fore.RESET}{Style.RESET_ALL}\n")
         recentnews()
-        print("Bem vindo, selecione sua opção:")
         menuchoice = str(input(
             "[1]Fazer login.\n"
             "[2]Cadastrar.\n"
