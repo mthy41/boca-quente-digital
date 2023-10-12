@@ -9,22 +9,28 @@ def listnews (userinput):
         if (islistreversed == False):
             for i in range (1, (len(newsdict) + 1)):
                 newsvalues = newsdict[str(i)]
-                print(
-                    f"ID[{i}] {newsvalues[0]}:\n" # ID e Titulo
-                    #f"{newsvalues[1]}\n" #Texto
-                    f" ❤ {newsvalues[4]} | Publicado por @{newsvalues[2]} | {newsvalues[3]}\n"
-                    f"{horbar(horbar)}"
-                )
+                if (newsvalues[6] == "DELETED=TRUE"):
+                    continue
+                else:
+                    print(
+                        f"ID[{i}] {newsvalues[0]}:\n" # ID e Titulo
+                        #f"{newsvalues[1]}\n" #Texto
+                        f" ❤ {newsvalues[4]} | Publicado por @{newsvalues[2]} | {newsvalues[3]}\n"
+                        f"{horbar(horbar)}"
+                    )
         if (islistreversed == True):
             for i in range (len(newsdict), -1, -1):
                 if i == 0: break
                 newsvalues = newsdict[str(i)]
-                print(
-                    f"ID[{i}] {newsvalues[0]}:\n" # ID e Titulo
-                    #f"{newsvalues[1]}\n" #Texto
-                    f" ❤ {newsvalues[4]} | Publicado por @{newsvalues[2]} | {newsvalues[3]}\n"
-                    f"{horbar(horbar)}"
-                )
+                if (newsvalues[6] == "DELETED=TRUE"):
+                    continue
+                else:
+                    print(
+                        f"ID[{i}] {newsvalues[0]}:\n" # ID e Titulo
+                        #f"{newsvalues[1]}\n" #Texto
+                        f" ❤ {newsvalues[4]} | Publicado por @{newsvalues[2]} | {newsvalues[3]}\n"
+                        f"{horbar(horbar)}"
+                    )
         print(
             "Digite o [ID] para ver a notícia.\n"
             "[*]Para reverter ordem da lista\n"
@@ -40,7 +46,14 @@ def listnews (userinput):
                 islistreversed = False
             continue
         if (userchoice in newsdict):
-            viewnews(userinput, userchoice)
+            newsvalues = newsdict[userchoice]
+            if (newsvalues[6] == "DELETED=FALSE"):
+                viewnews(userinput, userchoice)
+            else:
+                print("Opção inválida ou ID de notícia não existe.")
+                input("Enter para continuar.")
+                continue
+
         else:
             print("Opção inválida ou ID de notícia não existe.")
             input("Enter para continuar.")

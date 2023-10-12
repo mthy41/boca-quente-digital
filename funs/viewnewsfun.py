@@ -2,6 +2,7 @@ from funs.tempdata import userlist, newsdict, comlist
 from funs.clifun import verspace, horbar
 from funs.addcomfun import addcom
 from funs.viewcomfun import viewcom
+from funs.deletebewsfun import newsdelete
 
 def viewnews (userinput, userchoice):
     newsvalues = newsdict[userchoice]
@@ -24,9 +25,14 @@ def viewnews (userinput, userchoice):
             f"{horbar(horbar)}\n"
             f"{likeopt}\n"
             "[2]Comentar na notícia.\n"
-            "[3]Ver comentários\n"
-            "[0]Sair."
+            "[3]Ver comentários."
+            #"[0]Sair."
         )
+        if (newsvalues[2] == userinput):
+            print(
+                f"[4]Apagar notícia."
+            )
+        print("[0]Sair.")
         userviewchoice = str(input(">> "))
         
         #Curtir ou remover curtida
@@ -64,3 +70,24 @@ def viewnews (userinput, userchoice):
         #Ver comentarios
         if (userviewchoice == "3"):
             viewcom(userinput, uservalues, userchoice)
+            
+        #Apagar notícia
+        if (newsvalues[2] == userinput):
+            print(f"Tem certeza que deseja apagar a notícia de ID: {userchoice}?")
+            confirm =  input(
+                f"[1] Sim.\n"
+                f"[0]Não.\n>> "
+            )
+            if (confirm == "0"):
+                continue
+            if (confirm == "1"):
+                newsvalues[0] = "[PUBLICAÇÃO EXCLUÍDA]"
+                newsvalues[1] = ""
+                newsvalues[5] = []
+                newsvalues[6] = "DELETED=TRUE"
+                newsdict[userchoice] = newsvalues
+                #print(newsvalues)
+                break
+            else:
+                print("Opção inválida")
+                input("Pressione enter para continuar.")
