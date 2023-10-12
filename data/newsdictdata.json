@@ -4,7 +4,9 @@
   "Nesta Quinta-Feira, o prefeito sancionou uma lei municipal que proibe qualquer tipo de comemora\u00e7\u00e3o, p\u00fablica ou privada, relacionada ao natal.",
   "choquei",
   "1964.23.12 - 00:00",
-  666
+  666,
+  [],
+  "DELETED=FALSE"
  ],
  "1": [
   "title",
@@ -12,17 +14,25 @@
   "author",
   "date",
   4,
-  []
+  [],
+  "DELETED=FALSE"
  ],
  "3": [
-  "teste",
-  "fsdfdsfdsf",
+  "[PUBLICA\u00c7\u00c3O EXCLU\u00cdDA]",
+  "",
   "cat",
   "2023-10-11 10:26:01",
-  2,
-  [
-   "2",
-   "3"
-  ]
+  3,
+  [],
+  "DELETED=TRUE"
+ ],
+ "4": [
+  "[PUBLICA\u00c7\u00c3O EXCLU\u00cdDA]",
+  "",
+  "cat",
+  "2023-10-12 13:08:40",
+  0,
+  [],
+  "DELETED=TRUE"
  ]
 }

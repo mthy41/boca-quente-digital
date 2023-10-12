@@ -4,6 +4,7 @@ from funs.recentnewsfun import recentnews
 from funs.searchnewsfun import searchnews
 from funs.listnewsfun import listnews
 from funs.postnewfun import postnew
+from funs.deletebewsfun import newsdelete
 
 def logged (userinput="guest"):
     while True:
@@ -42,15 +43,15 @@ def logged (userinput="guest"):
             if (userloggedchoice == "1"):
                 searchnews(userinput)
         
-        #????????????????
-        if userlist[userinput][1] == "USER":
-            if (userloggedchoice == "2"):
-                searchnews(userinput)
-                
-        #ADM pesquisar
-        if userlist[userinput][2] == "ADM":
-            if (userloggedchoice == "1"):
-                searchnews(userinput)
+        ##????????????????
+        #if userlist[userinput][1] == "USER":
+        #    if (userloggedchoice == "2"):
+        #        searchnews(userinput)
+        #        
+        ##ADM pesquisar
+        #if userlist[userinput][2] == "ADM":
+        #    if (userloggedchoice == "1"):
+        #        searchnews(userinput)
         
         #Convidade listar
         if userlist[userinput][2] == "GUEST":
@@ -59,12 +60,18 @@ def logged (userinput="guest"):
 
         #Opções de usuário
         if userlist[userinput][2] == "USER":
+            if (userloggedchoice == "1"):
+                searchnews(userinput)
             if (userloggedchoice == "2"):
                 listnews(userinput)
 
         #Opções de administrador
         if userlist[userinput][2] == "ADM":
+            if (userloggedchoice == "1"):
+                searchnews(userinput)
             if (userloggedchoice == "2"):
                 listnews(userinput)
             if (userloggedchoice == "4"):
                 postnew(userinput)
+            if (userloggedchoice == "6"):
+                newsdelete(userinput)

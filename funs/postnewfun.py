@@ -52,7 +52,7 @@ def postnew (userinput):
         if (userchoicepostnew == "3"):
             likes = 0
             newsid = str(len(newsdict) + 1)
-            newsvalues = [title, body, (userinput),(dateandtime()), likes, []]
+            newsvalues = [title, body, (userinput),(dateandtime()), likes, [], "DELETED=FALSE"]
             newsdict[newsid] = newsvalues
             #print(newsdict)
             break
