@@ -8,7 +8,7 @@ ___
 - [ ] Poder apagar o próprio comentário
 ___
 ## Bugfix
-- [ ] Entrar sem senha
-- [ ] Notícia não encontrada ao sair de uma pesquisa por título
-- [ ] Convidado dando like em notícias
-- [ ] Convidado não conseguir pesquisar notícias
+- [x] Entrar sem senha
+- [x] Notícia não encontrada ao sair de uma pesquisa por título
+- [x] Convidado dando like em notícias
+- [x] Convidado não conseguir pesquisar notícias

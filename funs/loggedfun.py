@@ -36,19 +36,23 @@ def logged (userinput="guest"):
         if (userloggedchoice == "0"):
             verspace()
             break
-
-        if userlist[userinput][1] == "GUEST":
-            if (userloggedchoice == "2"):
+        
+        #Convidade pesquisar
+        if userlist[userinput][2] == "GUEST":
+            if (userloggedchoice == "1"):
                 searchnews(userinput)
         
+        #????????????????
         if userlist[userinput][1] == "USER":
             if (userloggedchoice == "2"):
                 searchnews(userinput)
                 
+        #ADM pesquisar
         if userlist[userinput][2] == "ADM":
             if (userloggedchoice == "1"):
                 searchnews(userinput)
         
+        #Convidade listar
         if userlist[userinput][2] == "GUEST":
             if (userloggedchoice == "2"):
                 listnews(userinput)

@@ -25,6 +25,8 @@ def searchnews (userinput):
             break
         if (searchnewschoice == "1"):
             idsearch = input("ID: ")
+            if (idsearch == "0"):
+                break
             if (idsearch in newsdict):
                 viewnews(userinput, idsearch)
             else:
@@ -33,6 +35,8 @@ def searchnews (userinput):
             continue
         if (searchnewschoice == "2"):
             titlesearch = input("Título: ")
+            if (titlesearch == "0"):
+                break
             for i in newsdict:
                 values = newsdict[i]
                 if (titlesearch == values[0]):

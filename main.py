@@ -38,7 +38,8 @@ def main ():
                 
                 if (userinput in userlist):
                     #print("o usuario existe")
-                    if (upi in userlist[userinput][0]):
+                    print(userlist[userinput][0])
+                    if (upi == userlist[userinput][0]):
                         #print('a senha existe')
                         logged(userinput)
                         break

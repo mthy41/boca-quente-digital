@@ -31,6 +31,10 @@ def viewnews (userinput, userchoice):
         
         #Curtir ou remover curtida
         if (userviewchoice == "1"):
+            if uservalues[2] == "GUEST":
+                print("Você precisa fazer login para poder curtir publicações.")
+                input("Pressione enter para voltar.")
+                continue
             if (isliked == False):
                 (likedNewsIDs.append(userchoice))
                 uservalues.insert(3,likedNewsIDs)
