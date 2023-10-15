@@ -3,6 +3,7 @@ from funs.clifun import verspace, horbar
 from funs.addcomfun import addcom
 from funs.viewcomfun import viewcom
 from funs.deletebewsfun import newsdelete
+from funs.editnewsfun import newsedit
 
 def viewnews (userinput, userchoice):
     newsvalues = newsdict[userchoice]
@@ -31,6 +32,10 @@ def viewnews (userinput, userchoice):
         if (newsvalues[2] == userinput):
             print(
                 f"[4]Apagar notícia."
+            )
+        if (userinput == newsvalues[2]):
+            print(
+                f"[5]Editar notícia."
             )
         print("[0]Sair.")
         userviewchoice = str(input(">> "))
@@ -71,23 +76,29 @@ def viewnews (userinput, userchoice):
         if (userviewchoice == "3"):
             viewcom(userinput, uservalues, userchoice)
             
+        #Editar notícia
+        if (userviewchoice == "5"):
+            if (newsvalues[2] == userinput):
+                newsedit(userinput, userchoice)
         #Apagar notícia
-        if (newsvalues[2] == userinput):
-            print(f"Tem certeza que deseja apagar a notícia de ID: {userchoice}?")
-            confirm =  input(
-                f"[1] Sim.\n"
-                f"[0]Não.\n>> "
-            )
-            if (confirm == "0"):
-                continue
-            if (confirm == "1"):
-                newsvalues[0] = "[PUBLICAÇÃO EXCLUÍDA]"
-                newsvalues[1] = ""
-                newsvalues[5] = []
-                newsvalues[6] = "DELETED=TRUE"
-                newsdict[userchoice] = newsvalues
-                #print(newsvalues)
-                break
-            else:
-                print("Opção inválida")
-                input("Pressione enter para continuar.")
+        if (userviewchoice == "4"):
+            if (newsvalues[2] == userinput):
+                print(f"Tem certeza que deseja apagar a notícia de ID: {userchoice}?")
+                confirm =  input(
+                    f"[1] Sim.\n"
+                    f"[0]Não.\n>> "
+                )
+                if (confirm == "0"):
+                    continue
+                if (confirm == "1"):
+                    newsvalues[0] = "[PUBLICAÇÃO EXCLUÍDA]"
+                    newsvalues[1] = ""
+                    newsvalues[5] = []
+                    newsvalues[6] = "DELETED=TRUE"
+                    newsdict[userchoice] = newsvalues
+                    #print(newsvalues)
+                    break
+                else:
+                    print("Opção inválida")
+                    input("Pressione enter para continuar.")
+            

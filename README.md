@@ -2,7 +2,7 @@
 ___
 ## Tasks
 - [x] Opção de deletar notícais
-- [ ] Opção de editar notícia
+- [x] Opção de editar notícia
 - [ ] Mudar tela de cadastro
 - [ ] Pedir e-mail no cadastro, com validação
 - [ ] Validar caracteres do user escolhido no cadastro
@@ -19,3 +19,5 @@ ___
 - [x] Notícia não encontrada ao sair de uma pesquisa por título
 - [x] Convidado dando like em notícias
 - [x] Convidado não conseguir pesquisar notícias
+- [ ] Ver comentários como convidado
+- [ ] Tela vazia quando notícia tem 0 comentários

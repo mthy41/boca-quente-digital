@@ -5,6 +5,7 @@ from funs.searchnewsfun import searchnews
 from funs.listnewsfun import listnews
 from funs.postnewfun import postnew
 from funs.deletebewsfun import newsdelete
+from funs.editnewsfun import newsedit
 
 def logged (userinput="guest"):
     while True:
@@ -73,5 +74,7 @@ def logged (userinput="guest"):
                 listnews(userinput)
             if (userloggedchoice == "4"):
                 postnew(userinput)
+            if (userloggedchoice == "5"):
+                newsedit(userinput)
             if (userloggedchoice == "6"):
                 newsdelete(userinput)
