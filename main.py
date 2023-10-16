@@ -23,8 +23,9 @@ def main ():
         recentnews()
         menuchoice = str(input(
             "[1]Fazer login.\n"
-            "[2]Cadastrar.\n"
-            "[3]Entrar como convidado.\n"
+            "[2]Cadastrar Leitor.\n"
+            "[3]Cadastrar Editor.\n"
+            "[4]Entrar como convidado.\n"
             "[0]Sair.\n"
             #f"{userlist}"
         ))
@@ -62,11 +63,14 @@ def main ():
                     else:
                         continue
         #Login como convidado
-        if (menuchoice == "3"):
+        if (menuchoice == "4"):
             logged()
             
+        #Cadastrar como leitor
         if (menuchoice == "2"):
-            sigin()
+            sigin("USER")
+        if (menuchoice == "3"):
+            sigin("ADM")
            
 
 main()

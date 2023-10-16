@@ -3,9 +3,9 @@ ___
 ## Tasks
 - [x] Opção de deletar notícais
 - [x] Opção de editar notícia
-- [ ] Mudar tela de cadastro
-- [ ] Pedir e-mail no cadastro, com validação
-- [ ] Validar caracteres do user escolhido no cadastro
+- [x] Mudar tela de cadastro
+- [x] Pedir e-mail no cadastro, com validação
+- [x] Validar caracteres do user escolhido no cadastro
 ___
 ## Features opcionais
 - [x] JSON data parsing

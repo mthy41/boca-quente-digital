@@ -99,5 +99,39 @@
    "6"
   ],
   []
+ ],
+ "dogao": [
+  "123123",
+  "Dogger Crawler",
+  "USER",
+  []
+ ],
+ "cater": [
+  "123123",
+  "Cat Puffer",
+  "ADM",
+  [],
+  []
+ ],
+ "cobby": [
+  "123123",
+  "Cob Jacker",
+  "USER",
+  [],
+  "cobyjack@example.com"
+ ],
+ "fesfafic": [
+  "123123",
+  "Faculdade Cat\u00f3lica",
+  "USER",
+  [],
+  "faculdade@catolica.com"
+ ],
+ "jack": [
+  "123123",
+  "Jack Stripper",
+  "USER",
+  [],
+  "daskdmsakm@.com"
  ]
 }
