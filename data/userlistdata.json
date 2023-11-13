@@ -133,5 +133,30 @@
   "USER",
   [],
   "daskdmsakm@.com"
+ ],
+ "choque": [
+  "123123",
+  "Choque Chocado",
+  "USER",
+  [
+   "2"
+  ],
+  [
+   "2"
+  ],
+  "choquei@choque.com"
+ ],
+ "rene": [
+  "123123",
+  "Rene Prof",
+  "ADM",
+  [
+   "2"
+  ],
+  [
+   "2"
+  ],
+  [],
+  "2kkoi@ok.com"
  ]
 }

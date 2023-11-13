@@ -6,6 +6,7 @@ from funs.listnewsfun import listnews
 from funs.postnewfun import postnew
 from funs.deletebewsfun import newsdelete
 from funs.editnewsfun import newsedit
+from funs.accsettingsfun import usersettings
 
 def logged (userinput="guest"):
     while True:
@@ -65,6 +66,8 @@ def logged (userinput="guest"):
                 searchnews(userinput)
             if (userloggedchoice == "2"):
                 listnews(userinput)
+            if (userloggedchoice == "3"):
+                usersettings(userinput)
 
         #Opções de administrador
         if userlist[userinput][2] == "ADM":
@@ -72,6 +75,8 @@ def logged (userinput="guest"):
                 searchnews(userinput)
             if (userloggedchoice == "2"):
                 listnews(userinput)
+            if (userloggedchoice == "3"):
+                usersettings(userinput)
             if (userloggedchoice == "4"):
                 postnew(userinput)
             if (userloggedchoice == "5"):
