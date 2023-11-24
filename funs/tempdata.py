@@ -8,7 +8,6 @@ userlist = {}
 
 newsdict = {
     "2":["GRAVE! Prefeito de Cajazeiras cancela natal por falta de verba", "Nesta Quinta-Feira, o prefeito sancionou uma lei municipal que proibe qualquer tipo de comemoração, pública ou privada, relacionada ao natal.", "choquei", "1964.23.12 - 00:00", 666]
-        
     }
 
 comlist = {}
