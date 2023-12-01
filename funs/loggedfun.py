@@ -5,7 +5,7 @@ from funs.searchnewsfun import searchnews
 from funs.listnewsfun import listnews
 from funs.postnewfun import postnew
 from funs.deletebewsfun import newsdelete
-from funs.editnewsfun import newsedit
+from editnewsfun import newsedit
 from funs.accsettingsfun import usersettings
 
 def logged (userinput="guest"):

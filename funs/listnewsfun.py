@@ -1,6 +1,7 @@
 from funs.tempdata import userlist, newsdict, comlist
 from funs.clifun import verspace, horbar
 from funs.viewnewsfun import viewnews
+from funs.sortalg import bubblesort as bubblesort
 
 def listnews (userinput):
     islistreversed = False #Ordem padrão (das mais velhas as mais novas)
@@ -34,9 +35,12 @@ def listnews (userinput):
         print(
             "Digite o [ID] para ver a notícia.\n"
             "[*]Para reverter ordem da lista\n"
+            "[c]Ordenar por curtidas.\n"
             "[0]Para voltar."
         )
         userchoice = input(">> ")
+        if (userchoice == "c" or userchoice == "C"):
+            bubblesort(newsdict, 4)
         if (userchoice == "0"):
             break
         if (userchoice == "*"):
