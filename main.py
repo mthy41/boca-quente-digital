@@ -14,7 +14,7 @@ from funs.addcomfun import addcom
 
 data_import()
 def main ():
-    headerbq = text2art("Bq", "isometric3")
+    headerbq = text2art("Qb", "isometric3")
     while True:
         #test()
         print(f"{Fore.RED}{Style.BRIGHT}{headerbq}{Fore.RESET}{Style.RESET_ALL}\n")
