@@ -1,6 +1,7 @@
 from funs.tempdata import userlist, newsdict, comlist
 from funs.clifun import horbar, verspace
 from funs.addcomfun import addcom
+from colorama import *
 
 def viewcom (userinput, uservalues, userchoice):
     while True:
@@ -8,7 +9,7 @@ def viewcom (userinput, uservalues, userchoice):
         newsvalues = newsdict[userchoice]
         for i in (newsvalues[5]):
             comvalues = comlist[i]
-            print(f"@{comvalues[1]}: {comvalues[2]}")
+            print(f"{Style.BRIGHT}@{comvalues[1]}{Style.RESET_ALL}: {comvalues[2]}")
             print(horbar(horbar))
         
         print(

@@ -67,7 +67,9 @@ def logged (userinput="guest"):
             if (userloggedchoice == "2"):
                 listnews(userinput)
             if (userloggedchoice == "3"):
-                usersettings(userinput)
+                isDeleted = usersettings(userinput)
+                if isDeleted == True:
+                    break
 
         #Opções de administrador
         if userlist[userinput][2] == "ADM":

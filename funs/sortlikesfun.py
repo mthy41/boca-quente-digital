@@ -18,6 +18,7 @@ def listByLikes (userinput, bubbleSortedList):
     isListreversed = False
     isAuthorFiltered = False
     authorFilterOpt = "[a]Filtrar por autor."
+    authorNews = True
     # print(len(bubbleSortedList))
     while True:
         verspace()
@@ -51,7 +52,7 @@ def listByLikes (userinput, bubbleSortedList):
             f"Digite o [ID] para ver a notícia ou:\n"
             f"[t]Ordenar por tempo de publicação.\n"
             f"{authorFilterOpt}\n"
-            f"[*]Para reverter ordem da lista\n"
+            # f"[*]Para reverter ordem da lista\n"
             f"[0]Para voltar."
         )
         userChoice = input(">> ")
@@ -77,7 +78,11 @@ def listByLikes (userinput, bubbleSortedList):
                     if not userlist[authorChoice][2] == "ADM":
                         print("O usuário não é um autor(a).")
                         input("Pressione enter para continuar.\n>> ")
+                        continue
+                    authorFilterOpt = "[a]Remover filtro."
+                    isAuthorFiltered = True
                     authorNews = False
+                    continue
                     for news in bubbleSortedList:
                         if news[2] == authorChoice and news[6] == "DELETED=FALSE":
                             authorNews = True

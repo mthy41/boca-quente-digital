@@ -1,12 +1,13 @@
 from funs.clifun import *
 from funs.tempdata import userlist
 from colorama import Fore, Style
+from getpass import getpass
 import getpass
 #init(autoreset=True)
 
 def usersettings(userinput):
     uservalues = userlist[userinput]
-    useremail = uservalues[5]
+    useremail = uservalues[4]
     while True:
         verspace()
 
@@ -139,4 +140,20 @@ def usersettings(userinput):
                 input("Pressione enter para continuar.")
                 continue
             continue #
-
+    #desativar a conta
+        if (accuserchoice == "4"):
+            verspace()
+            while True:
+                print("Você tem certeza que deseja fazer esssa ação?")
+                print("[1] Sim")
+                print("[0] Não")
+                userChoiceConfirm = input(">> ")
+                if userChoiceConfirm == "0":
+                    break
+                if userChoiceConfirm == "1":
+                    print("Por favor, digite sua senha")
+                    userPassConfirm = getpass.getpass(">> ")
+                    if userPassConfirm == uservalues[0]:
+                        userlist.pop(userinput)
+                        return True
+                    # userlist.pop(userinput)
