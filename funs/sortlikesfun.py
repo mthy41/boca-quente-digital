@@ -1,5 +1,5 @@
 from funs.clifun import horbar, verspace
-from funs.tempdata import newsdict
+from funs.tempdata import newsdict, userlist
 from funs.viewnewsfun import viewnews
 
 def listByLikes (userinput, bubbleSortedList):
@@ -20,11 +20,12 @@ def listByLikes (userinput, bubbleSortedList):
     authorFilterOpt = "[a]Filtrar por autor."
     # print(len(bubbleSortedList))
     while True:
+        verspace()
         if isListreversed == False:
             for news in range(0, len(bubbleSortedList)):
                 if isAuthorFiltered == True:
-                    newsvalues = news in bubbleSortedList
-                    if news[2] == authorChoice:
+                    newsvalues = bubbleSortedList[news]
+                    if not newsvalues[2] == authorChoice:
                         continue
                 print(
                     f"ID[{news + 1}] {bubbleSortedList[news][0]}:\n"
@@ -33,6 +34,11 @@ def listByLikes (userinput, bubbleSortedList):
                     # f"{bubbleSortedList[news][6]}"
                 )
         if isListreversed == True:
+            for news in range(0, len(bubbleSortedList)):
+                if isAuthorFiltered == True:
+                    newsvalues = bubbleSortedList[news]
+                    if not newsvalues[2] == authorChoice:
+                        continue
             for news in reversed(range(0, len(bubbleSortedList))):
                 # if news == 0: break
                 print(
@@ -58,10 +64,37 @@ def listByLikes (userinput, bubbleSortedList):
             break
         
         if userChoice == "a" or userChoice == "A":
-            isAuthorFiltered = "[a]Remover filtro."
-            verspace()
-            print("Insira o @ do autor:")
-            authorChoice = input(">> ")
+            if isAuthorFiltered == False:
+                verspace()
+                print("Insira o @ do autor:")
+                authorChoice = input(">> ")
+                if not authorChoice in userlist:
+                    verspace()
+                    print("Este usuário não existe.")
+                    input("Pressione enter para continuar.\n>> ")
+                    continue
+                if authorChoice in userlist:
+                    if not userlist[authorChoice][2] == "ADM":
+                        print("O usuário não é um autor(a).")
+                        input("Pressione enter para continuar.\n>> ")
+                    authorNews = False
+                    for news in bubbleSortedList:
+                        if news[2] == authorChoice and news[6] == "DELETED=FALSE":
+                            authorNews = True
+                if authorNews == True:
+                    authorFilterOpt = "[a]Remover filtro."
+                    isAuthorFiltered = True
+                    continue
+                else:
+                    verspace()
+                    authorNews = False                
+                verspace()
+                continue
+            if isAuthorFiltered == True:
+                authorFilterOpt = "[a]Filtrar por autor."
+                isAuthorFiltered = False
+                verspace()
+                continue
             
         
         if userChoice == "*":

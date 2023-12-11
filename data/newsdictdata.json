@@ -21,22 +21,22 @@
   "DELETED=FALSE"
  ],
  "3": [
-  "[PUBLICA\u00c7\u00c3O EXCLU\u00cdDA]",
-  "",
+  "Noticia de teste",
+  "Conteudo",
   "cat",
   "2023-10-11 10:26:01",
   3,
   [],
-  "DELETED=TRUE"
+  "DELETED=FALSE"
  ],
  "4": [
-  "[PUBLICA\u00c7\u00c3O EXCLU\u00cdDA]",
-  "",
+  "Mais novidades no site",
+  "Acaba de chegar atualizacoes no QB veja na integra agora.",
   "cat",
   "2023-10-12 13:08:40",
-  0,
+  102,
   [],
-  "DELETED=TRUE"
+  "DELETED=FALSE"
  ],
  "5": [
   "[PUBLICA\u00c7\u00c3O EXCLU\u00cdDA]",
@@ -48,13 +48,13 @@
   "DELETED=TRUE"
  ],
  "6": [
-  "[PUBLICA\u00c7\u00c3O EXCLU\u00cdDA]",
-  "",
+  "Estamos de volta!",
+  "Fomos banidos mas recuperamos a conta. Nao nos calarao!",
   "vevanse23",
   "2023-10-12 23:22:20",
   1,
   [],
-  "DELETED=TRUE"
+  "DELETED=FALSE"
  ],
  "7": [
   "[PUBLICA\u00c7\u00c3O EXCLU\u00cdDA]",
