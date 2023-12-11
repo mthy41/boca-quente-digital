@@ -17,12 +17,15 @@ def listByLikes (userinput, bubbleSortedList):
             
     isListreversed = False
     isAuthorFiltered = False
+    authorFilterOpt = "[a]Filtrar por autor."
     # print(len(bubbleSortedList))
     while True:
         if isListreversed == False:
             for news in range(0, len(bubbleSortedList)):
-                # if bubbleSortedList[news][6] == "DELETED=TRUE":
-                #     continue
+                if isAuthorFiltered == True:
+                    newsvalues = news in bubbleSortedList
+                    if news[2] == authorChoice:
+                        continue
                 print(
                     f"ID[{news + 1}] {bubbleSortedList[news][0]}:\n"
                     f" ❤ {bubbleSortedList[news][4]} | Publicado por @{bubbleSortedList[news][2]} | {bubbleSortedList[news][3]}\n"
@@ -39,10 +42,11 @@ def listByLikes (userinput, bubbleSortedList):
                 )
         # break    
         print(
-            "Digite o [ID] para ver a notícia ou:\n"
-            "[*]Para reverter ordem da lista\n"
-            "[t]Ordenar por tempo de publicação.\n"
-            "[0]Para voltar."
+            f"Digite o [ID] para ver a notícia ou:\n"
+            f"[t]Ordenar por tempo de publicação.\n"
+            f"{authorFilterOpt}\n"
+            f"[*]Para reverter ordem da lista\n"
+            f"[0]Para voltar."
         )
         userChoice = input(">> ")
         
@@ -52,6 +56,13 @@ def listByLikes (userinput, bubbleSortedList):
 
         if userChoice == "t" or userChoice == "T":
             break
+        
+        if userChoice == "a" or userChoice == "A":
+            isAuthorFiltered = "[a]Remover filtro."
+            verspace()
+            print("Insira o @ do autor:")
+            authorChoice = input(">> ")
+            
         
         if userChoice == "*":
             if isListreversed == False:
