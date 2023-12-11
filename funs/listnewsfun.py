@@ -2,6 +2,7 @@ from funs.tempdata import userlist, newsdict, comlist
 from funs.clifun import verspace, horbar
 from funs.viewnewsfun import viewnews
 from funs.sortalg import bubblesort as bubblesort
+from funs.sortlikesfun import listByLikes
 
 def listnews (userinput):
     islistreversed = False #Ordem padrão (das mais velhas as mais novas)
@@ -33,14 +34,19 @@ def listnews (userinput):
                         f"{horbar(horbar)}"
                     )
         print(
-            "Digite o [ID] para ver a notícia.\n"
+            "Digite o [ID] para ver a notícia ou:\n"
             "[*]Para reverter ordem da lista\n"
             "[c]Ordenar por curtidas.\n"
             "[0]Para voltar."
         )
         userchoice = input(">> ")
         if (userchoice == "c" or userchoice == "C"):
-            bubblesort(newsdict, 4)
+            sortedList = bubblesort(newsdict, 4)
+            exitAux = listByLikes(userinput, sortedList)
+            if exitAux == "C":
+                break
+            continue
+            
         if (userchoice == "0"):
             break
         if (userchoice == "*"):

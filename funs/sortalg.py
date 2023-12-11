@@ -6,12 +6,11 @@ def bubblesort (array, args):
     newsList = []
     for item_list in range(0, len(array)+1):
         try:
-            
             newsList.insert(item_list, (array[str(item_list + 1)]))
             # print("ok")
         except KeyError:
             continue
-    
+
     while True:
         swapCount = False
         for x in range (0, len(newsList)):
@@ -23,13 +22,11 @@ def bubblesort (array, args):
                     newsList.insert(x, swap_aux)
                     swapCount = True
             except IndexError:
-                swapCount = False
                 continue
         if swapCount == False:
             break
-    # listByLikes(newsList)
-    listByLikes(newsList)
     return newsList
+
 
 
 print(bubblesort(newsdict, 4))

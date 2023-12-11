@@ -3,7 +3,7 @@ from funs.clifun import verspace, horbar
 from funs.addcomfun import addcom
 from funs.viewcomfun import viewcom
 from funs.deletebewsfun import newsdelete
-from editnewsfun import newsedit
+from funs.editnewsfun import newsedit
 
 def viewnews (userinput, userchoice):
     newsvalues = newsdict[userchoice]
